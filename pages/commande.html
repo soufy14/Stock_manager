@@ -87,7 +87,7 @@
                         <a href="#section_2"><p>Mon Profil</p></a>
                     </div>
                 </button>
-                  <button class="footer_admis_C" onclick="window.location.href='/index.html'">
+                  <button class="footer_admis_C" onclick="window.location.href='../index.html'">
                     <div><i class="fa-solid fa-right-to-bracket"></i></div>
                     <div class="verifi">
                         <p>Déconnexion</p>
@@ -194,8 +194,8 @@
                     <p class="bleus">€1,199.00</p>
                 </div>
                 <div class="element_3">
-                    <button class="tt_1"><i class="fa-solid fa-eye"></i>Voir détails</button>
-                    <button class="tt_2"><i class="fa-solid fa-pen-to-square"></i>Modifier</button>
+                    <a href="#voir"><button class="tt_1" id="tt_1"><i class="fa-solid fa-eye"></i>Voir détails</button></a>
+                    <a href="#modifier"><button class="tt_2"><i class="fa-solid fa-pen-to-square"></i>Modifier</button></a>
                     <button class="tt_3"><i class="fa-solid fa-check"></i>Traiter</button>
                 </div>
             </div>
@@ -220,8 +220,8 @@
                     <p class="bleus">€2,899.00</p>
                 </div>
                 <div class="element_3" id="element_2">
-                    <button class="tt_1"><i class="fa-solid fa-eye"></i>Voir détails</button>
-                    <button class="tt_2"><i class="fa-solid fa-pen-to-square"></i>Modifier</button>
+                    <a href="#voir"><button class="tt_1" id="tt_1"><i class="fa-solid fa-eye"></i>Voir détails</button></a>
+                    <a href="#modifier"><button class="tt_2"><i class="fa-solid fa-pen-to-square"></i>Modifier</button></a>
                     <button class="tt_3"><i class="fa-solid fa-truck-fast"></i>Expédier</button>
                 </div>
             </div>
@@ -246,10 +246,140 @@
                     <p class="bleus">€558.00</p>
                 </div>
                 <div class="element_3" id="element_3">
-                    <button class="tt_1"><i class="fa-solid fa-eye"></i>Voir détails</button>
+                    <a href="#voir"><button class="tt_1" id="tt_1"><i class="fa-solid fa-eye"></i>Voir détails</button></a>
                     <button class="tt_2"><i class="fa-solid fa-location-dot"></i>Suivre</button>
                     <button class="tt_3"><i class="fa-solid fa-circle-check"></i>Marquer livrée</button>
                 </div>
+            </div>
+        </section>
+        <section class="voir" id="voir">
+            <div class="voir_command">
+                <div class="partie_1" id="partie_1">
+                    <div class="p_t_1">
+                        <i class="fa-solid fa-eye"></i>
+                        <p>Détails de la Commande</p>
+                   </div>
+                   <a href="#tt_1">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+                <div class="comm_1">
+                    <h4 class="title">Informations Commande</h4>
+                    <hr class="hr">
+                </div>
+                <div class="comm_2">
+                    <div class="mm">
+                        <p>Numéro de commande :</p>
+                        <h5>Commande #CMD-2024-001</h5>
+                        <p>Statut : </p>
+                        <h5>En attente</h5>
+                    </div>
+                    <div class="mm">
+                        <p>Date de commande :</p>
+                        <h5>15 Jan 2024</h5>
+                        <p>Total :</p>
+                        <h5>€1,199.00</h5>
+                    </div>
+                </div>
+                <div class="comm_1">
+                    <h4 class="title">Informations Client</h4>
+                    <hr class="hr">
+                </div>
+                <div class="comm_2">
+                    <div class="mm">
+                        <p>Nom :</p>
+                        <h5>Jean Dupont</h5>
+                        <p>Téléphone :</p>
+                        <h5>+33 6 12 34 56 78</h5>
+                    </div>
+                    <div class="mm">
+                        <p>Email :</p>
+                        <h5>jean.dupont@email.com</h5>
+                        <p>Adresse :</p>
+                        <h5>123 Rue de la Paix, 75001 Paris</h5>
+                    </div>
+                </div>
+                <div class="comm_1">
+                    <h4 class="title">Articles Commandés</h4>
+                    <hr class="hr">
+                </div>
+                <div class="comm_3">
+                    <div class="cc" id="cc_2">
+                        <div class="cc_1">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h5>iPhone 15 Pro <span>128GB - Bleu</span></h5>
+                        </div>
+                        <div class="vert">1</div>
+                    </div>
+
+                    <div class="cc" id="cc_1">
+                        <p>€1,199.00</p>
+                        <p class="bleu">€1,199.00</p>
+                    </div>
+                </div>
+                <div class="partie_4">
+                    <a href="#tt_1"><button>Fermer</button></a>
+                    <button class="bleu">Imprimer</button>
+                </div>
+            </div>
+                   
+        </section>
+        <section class="voir" id="modifier">
+            <div class="voir_command">
+                <div class="partie_1" id="partie_1">
+                    <div class="p_t_1">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <p>Modifier la Commande</p>
+                   </div>
+                   <a href="#tt_1">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+                <div class="comm_1">
+                    <h4 class="title">Statut de la commande</h4>
+                </div>
+                <div class="p_t_3">
+                        <label for="Nom">Statut : </label>
+                        <select name="Nom" id="">
+                            <option value="En attente" selected="En attente">En attente</option>
+                            <option value="En attente" selected="En attente">En attente</option>
+                            <option value="En attente" selected="En attente">En attente</option>
+                            <option value="En attente" selected="En attente">En attente</option>
+                        </select>
+                </div>
+                <div class="comm_1">
+                    <h4 class="title">Informations de livraison</h4>
+                </div>
+                <div class="p_t_3">
+                    <label for="Nom">Adresse de livraison : </label>
+                    <textarea name="Nom" id="Nom">123 Rue de la Paix, 75001 Paris</textarea>
+                </div>
+                <div class="p_t_3">
+                    <label for="Nom">Date de livraison prévue :</label>
+                    <input type="date" placeholder="Administrateur" name="Nom">
+                </div>
+                <div class="comm_1">
+                    <h4 class="title">Notes</h4>
+                </div>
+                <div class="p_t_3">
+                    <label for="Nom">Notes internes : </label>
+                    <textarea name="Nom" id="Nom">Notes internes pour l'équipe...</textarea>
+                </div>
+                 <div class="partie_4">
+                    <a href="#tt_1"><button>Annuler</button></a>
+                    <button class="bleu">Sauvegarder</button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </section>
    </main>

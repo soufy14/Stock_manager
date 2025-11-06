@@ -95,11 +95,13 @@ header{
     color: var(--Text-White-color);
     font-size: 14px;
     cursor: pointer;
-    transition: 0.3s ease;
+    animation: num 2.5s alternate infinite;
 }
-.admis .ic .num:hover{
-    transform: scale(1.1);
+@keyframes num {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
+
 .navigateur .profit{
     display: flex;
     justify-content: center;
@@ -325,8 +327,7 @@ section{
     background-color: var(--White-color);
     display: flex;
     align-items: center;
-    gap: 30px;
-      
+    gap: 30px;    
 }
 .ligne_3_1 .input{
     display: flex;
@@ -1064,6 +1065,7 @@ td{
 
 .class_1:hover{
     transform: translateY(-5px);
+    
 }
 
 /* -------------------------------------------------Paramètres & Configuration------------------------------------------------------ */
@@ -1272,6 +1274,11 @@ input:checked + .choix::before {
     padding: 30px;
     border-radius: 12px;
     background-color: var(--White-color);
+    transition: 0.2s ease;
+}
+.command:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--Shadow-Large-1);
 }
 .command .element_1{
     display: flex;
@@ -1587,10 +1594,25 @@ input:checked + .choix::before {
         display: grid;
         grid-template-columns: 1fr;
     }
-
-
+    .voir_command .comm_2{
+        grid-template-columns: 1fr;
+    }
+     .voir_command .comm_3{
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+    }
+    #cc_1{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 270px;
+    }
+    .cc{
+        flex-direction: column;
+    }
 }
-@media (max-width:425px) {
+@media (max-width:430px) {
 
     .ligne_2{
         grid-template-columns: 1fr;
@@ -1607,26 +1629,170 @@ input:checked + .choix::before {
         font-size: 1rem;
         padding-top: 30px;
     }
-   
+    
+
+}
+@media (max-width:375px) {
+    .element_3 {
+        flex-direction: column;
+    }
+    .element_3 button {
+        width: 200px;
+    }
+    .mai {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+        .para_card_2 {
+            padding: 0;
+        }
+        #central .lign_1{
+            margin: 0;
+        }
+
+    .ligne_5_1, .ligne_5_2 {
+    flex-direction: column;
+    }
+    .ligne_5 {
+        height: auto;
+    }
+    .ligne_3_1 {
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+        height: 300px;
+    }
+    .navigateur .logo {
+        font-size: 16px;
+    }
+    .ligne_1_1 h1{
+        font-size: 20px;
+    }
+    .sidebar{
+        background: #0000008a;
+    }
+
+}
+/* -------------------------------------------------------------------------------voire commande----------------------------------------------------------- */
+
+.voir{
+       display: flex;
+       background: #00000069;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       position: absolute;
+       position: fixed;
+       width: 100vw;
+       left: -100vw; 
+       top: 0;
+       z-index: 3;
+       margin-left: 0;
+       backdrop-filter: blur(4px); 
+       overflow: hidden;
+       padding: 0;
+}
+.voir:target{
+    left: 0;
+}
+.voir_command{
+    width: 680px;
+    height: 70%;
+    background-color: #ffffff;
+    border-radius: 15px 0 0 15px;
+    overflow: scroll;
+    margin: 40px;
+    transition: 0.3s ease;
+}
+.voir_command #partie_1{
+    font-size: 20px;
+    font-weight: 700;
+}
+.comm_1{
+    padding: 30px;
+    
+}
+.comm_1 .title{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.comm_1 .hr{
+    border: 1px solid var(--Primary-color);
+}
+.comm_2{
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.comm_2 p{
+    color: var(--Text-Primary-color);
+    font-size: 15px;
+}
+.comm_2 h5{
+    font-size: 16px;
+}
+.comm_2 .mm{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+}
+.comm_3{
+    margin: 0 30px 30px;
+    padding: 10px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #F9FAFC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.comm_3 .cc{
+    display: flex;
+    /* align-items: center; */
+    gap: 45px;
+}
+.cc .cc_1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cc p{
+    font-weight: 700;
+}
+.cc .bleu{
+    color: var(--Primary-color);
+}
+.cc .vert{
+    color: var(--Success-color);
+}
+.cc_1 span{
+    font-weight: 300;
 }
 
 
 
+.voir_command .p_t_3{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.voir_command .p_t_3 select,
+.voir_command .p_t_3 textarea,
+.voir_command .p_t_3 input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--Border-color);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.voir_command .p_t_3 textarea{
+    height: 80px;
+    outline-color: rgb(30, 27, 27);
+    margin-bottom: 10px;
+}
 
 
 
@@ -1690,7 +1856,8 @@ input:checked + .choix::before {
 
 
 .section_2{
-       background: #000000de;
+       padding: 0;
+       background: #00000076;
        display: flex;
        justify-content: center;
        align-items: center;
@@ -1702,7 +1869,7 @@ input:checked + .choix::before {
        top: 0;
        z-index: 3;
        margin-left: 0;
-       backdrop-filter: blur(4px); 
+       backdrop-filter: blur(8px); 
        overflow-y: hidden;
 }
 .section_2:target{
@@ -1710,12 +1877,13 @@ input:checked + .choix::before {
 }
 .section_2 .mon_profil{
     width: 750px;
-    height: 100%;
-    background-color: #ffffff;
+    height: 80%;
+    background-color: #fff;
+    color: var(--Text-Primary-color);
     border-radius: 10px;
     overflow: scroll;
     margin: 40px;
-    
+    transition: 0.3s ease;
 }
 .partie_1{
     display: flex;
@@ -1723,10 +1891,10 @@ input:checked + .choix::before {
     justify-content: space-between;
     padding: 30px 40px;
     border-bottom: 1px solid var(--Border-color);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 .partie_1 i{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--Secondary-color);
     cursor: pointer;
 }
@@ -1761,8 +1929,11 @@ input:checked + .choix::before {
     cursor: pointer;
     background-color: var(--Background-color);
 }
-.partie_2 button:hover, .partie_4 button:hover{
-    background-color: #f7f7f7;
+.partie_2 button:hover{
+    background-color: #F9FAFC;
+}
+.partie_4 .bleu:hover{
+    background-color: var(--Primary-dark-color);
 }
 .partie_3{
     padding: 40px;
@@ -1796,7 +1967,7 @@ input:checked + .choix::before {
 }
 .partie_4 button{
     padding: 8px 15px;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 8px;
     border: 1px solid var(--Border-color);
     cursor: pointer;

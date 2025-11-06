@@ -152,3 +152,12 @@ body{
 .content_2 p{
     line-height: 1.4;
 }
+@media (max-width:450px) {
+    .conteneur{
+        flex-direction: column-reverse;
+    }
+    .conteneur .content_2,  .conteneur .content_1 {
+        width: 100%;
+    }
+    
+}
