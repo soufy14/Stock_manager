@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock - Manager</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   <header>
+         <nav class="navigateur"> 
+            <div class="logo">
+                <a href="#menu" class="open-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <p>Gestion de Stock - Produits Électroniques</p>
+            </div>
+            <div class="admis">
+                
+                <div class="ic">
+                    <div class="num">3</div>
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="profit">
+                    <a href=""><i class="fa-solid fa-circle-user"></i></a>
+                    <p>Administrateur</p>
+                </div>
+            </div>
+        </nav>
+   </header>
+   <main>
+        <aside class="sidebar" id="menu">
+            <div class="logo_2">
+                <div class="logo_2_icon"><i class="fa-solid fa-chart-line"></i></div>
+                <p>Dashboard</p>
+            </div>
+            <ul class="link">
+               <a href="table.html">
+                    <li class="link_1">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <p>Tableau de Bord</p>
+                    </li>
+                </a>
+                <a href="analytics.html">
+                    <li class="link_1">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <p>Analytics</p>
+                    </li>
+                </a>
+                <a href="commande.html">
+                    <li class="link_1">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p>Commandes</p>
+                    </li>
+                </a>
+                <a href="parametre.html" id="az">
+                    <li class="link_1">
+                        <i class="fa-solid fa-gears"></i>
+                        <p>Paramètres</p>
+                    </li>
+                </a>
+                <a href="rapport.html">
+                    <li class="link_1">
+                        <i class="fa-solid fa-chart-bar"></i>
+                        <p>Rapports</p>
+                    </li>
+                </a>
+                <a href="notif.html" >
+                    <li class="link_1">
+                        <i class="fa-solid fa-bell"></i>
+                        <p>Notifications</p>
+                    </li>
+                </a>
+            </ul>
+            <div class="footer">
+                <div class="footer_admis_A">
+                    <div class="icon_a"><i class="fa-solid fa-circle-user"></i></div>
+                    <div class="verifi">
+                        <p>Administrateur</p>
+                        <span>Gestionnaire</span>
+                    </div>
+                </div>
+                  <button class="footer_admis_B">
+                    <div><i class="fa-solid fa-circle-user"></i></div>
+                    <div class="verifi">
+                        <a href="#section_2"><p>Mon Profil</p></a>
+                    </div>
+                </button>
+                  <button class="footer_admis_C" onclick="window.location.href='/index.html'">
+                    <div><i class="fa-solid fa-right-to-bracket"></i></div>
+                    <div class="verifi">
+                        <p>Déconnexion</p>
+                    </div>
+                </button>
+            </div>
+        </aside>
+
+        <section>
+            <div class="ligne_1">
+                <div class="ligne_1_1">
+                   <i class="fa-solid fa-gears"></i><h1>Paramètres & Configuration</h1>
+                </div>
+                <p>Configuration du système et préférences utilisateur</p>
+            </div>
+            <div class="para_card">
+                <div class="para_card_1">
+                    <i class="fa-solid fa-sliders"></i>
+                    <h3>Paramétres Généraux</h3>
+                </div>
+                <div class="para_card_2">
+                    <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Notifications</h4>
+                            <p>Recevoir des notifications par email</p>
+                        </div>
+                        <label class="p_c_2" id="p_c_2">
+                            <input type="checkbox" id="p_c_2">
+                            <div class="choix"></div>
+                        </label>
+                    </div>
+                     <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Mode sombre</h4>
+                            <p>Activer le thème sombre</p>
+                        </div>
+                        <label class="p_c_2" id="p_c_2">
+                            <input type="checkbox" id="p_c_2">
+                            <div class="choix"></div>
+                        </label>
+                    </div>
+                     <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Auto-sauvegarde</h4>
+                            <p>Sauvegarder automatiquement les modifications</p>
+                        </div>
+                        <label class="p_c_2" id="p_c_2">
+                            <input type="checkbox" id="p_c_2">
+                            <div class="choix"></div>
+                        </label>
+                    </div>
+                     <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Langue</h4>
+                            <p>Langue de l'interface</p>
+                        </div>
+                        <div class="p_c_2_2">
+                            <select name="" id="">
+                                <option value="Français" selected="Français">Français</option>
+                                <option value="English">English</option>
+                                <option value="Español">Español</option>
+                                <option value="Arabe">Arabe</option>
+                            </select>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+             <div class="para_card">
+                <div class="para_card_1">
+                     <i class="fa-solid fa-network-wired"></i>
+                    <h3>Gestion de Stock</h3>
+                </div>
+                <div class="para_card_2">
+                     <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Seuil d'alerrte</h4>
+                            <p>Nombre minimum d'articles avant alerte</p>
+                        </div>
+                        <div class="p_c_2_2">
+                            <input type="number">
+                        </div>
+                    </div>
+                     <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Auto-commande</h4>
+                            <p>Commander automatiquement en cas de stock faible</p>
+                        </div>
+                        <label class="p_c_2" id="p_c_2">
+                            <input type="checkbox" id="p_c_2">
+                            <div class="choix"></div>
+                        </label>
+                    </div>
+                     <div class="contenu">
+                        <div class="p_c_1">
+                            <h4>Devise</h4>
+                            <p>Devise d'affichage</p>
+                        </div>
+                        <div class="p_c_2_2">
+                            <select name="" id="">
+                                <option value="Euro(€)" selected="Euro(€)">Euro(€)</option>
+                                <option value="Dollard($)">Dollar($)</option>
+                                <option value="Livres Sterling(£)">Livres Sterling(£)</option>
+                                <option value="Yen(¥)">Yen(¥)</option>
+                            </select>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="para_card">
+                <div class="para_card_1">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Sécurité</h3>
+                </div>
+                <div class="para_card_2">
+                     <div class="contenu" id="contenu">
+                        <div class="p_c_1">
+                            <h4>Authentification à deux facteurs</h4>
+                            <p>Activer la 2FA pour plus de sécurité</p>
+                        </div>
+                        <button class="b_n_t">
+                            <p>Activer</p>
+                        </button>
+                    </div>
+                     <div class="contenu" id="contenu">
+                        <div class="p_c_1">
+                            <h4>Changer le mot de passe</h4>
+                            <p>Modifier votre mot de passe actuel</p>
+                        </div>
+                        <button class="b_n_t" id="b_n_t_1">
+                            <p>Changer</p>
+                        </button>
+                    </div>
+                     <div class="contenu" id="contenu">
+                        <div class="p_c_1">
+                            <h4>Sessions actives</h4>
+                            <p>Gérer les sessions connectées</p>
+                        </div>
+                        <button class="b_n_t" id="b_n_t_2">
+                            <p>Voir (3)</p>
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="para_card">
+                <div class="para_card_1">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Systéme</h3>
+                </div>
+                <div class="para_card_2" id="fin">
+                    <div class="fin" id="f_1">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <p>Sauvegarder la configuration</p>
+                    </div>   
+                    <div class="fin">
+                        <i class="fa-solid fa-download"></i>
+                        <p>Exporter les paramètres</p>
+                    </div>   
+                    <div class="fin" id="f_2">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                        <p>Réinitialiser par défaut</p>
+                    </div>
+                    <div class="fin" id="f_2">
+                        <i class="fa-solid fa-trash"></i>
+                        <p>Effacer toutes les données</p>
+                    </div>      
+                </div>
+            </div>
+        </section>
+   </main>
+   <main>
+    <section class="section_2" id="section_2">
+            <div class="mon_profil">
+                <div class="partie_1">
+                    <div class="p_t_1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p>Mon Profil</p>
+                   </div>
+                   <a href="parametre.html">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+                <div class="partie_2">
+                    <div class="p_t_2">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <button>Changer la photo</button>
+                    </div>
+                </div>
+                <div class="partie_3">
+                    <div class="axe">
+                        <div class="p_t_3">
+                            <label for="Nom">Nom : </label>
+                            <input type="text" placeholder="Administrateur" name="Nom">
+                        </div>
+                        <div class="p_t_3">
+                            <label for="Nom">Prénom : </label>
+                            <input type="text" placeholder="Jean" name="Nom">
+                        </div>
+                    
+                        <div class="p_t_3">
+                            <label for="Nom">Email : </label>
+                            <input type="email" placeholder="admin@dashboard.com" name="Nom">
+                        </div>
+                        <div class="p_t_3">
+                            <label for="Nom">Téléphone : </label>
+                            <input type="tel" placeholder="+33 6 12 34 56 78" name="Nom">
+                        </div>
+                    </div>
+                    <div class="p_t_3">
+                        <label for="Nom">Rôle : </label>
+                        <input type="text" placeholder="Gestionnaire" name="Nom">
+                    </div>
+                    <div class="p_t_3">
+                        <label for="Nom">Dernière connexion : </label>
+                        <input type="datetime" placeholder="15 Janvier 2024 à 14:30" name="Nom">
+                    </div>
+                </div>
+                <div class="partie_4">
+                    <button>Fermer</button>
+                    <button class="bleu">Sauvegarder</button>
+                </div>
+            </div>
+        </section>
+   </main>
+</body>
+</html>
