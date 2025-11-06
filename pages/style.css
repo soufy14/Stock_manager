@@ -572,7 +572,7 @@ section{
 }
 .central{
     height: auto;
-    overflow: hidden;
+    overflow-x: auto;
     margin: 40px;
     border-radius: 15px;
     box-shadow: 0 1px 1px 1px #ebe9e9;
@@ -585,8 +585,7 @@ section{
     border-collapse: collapse ;
 }
 .lign{
-    height: 60px;
-    
+    height: 60px;   
 }
 .lign2{
     height: 90px;
@@ -1003,6 +1002,7 @@ td{
 .Tableau_analytic{
     width: 100%;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 .Tableau_analytic th, .Tableau_analytic td {
     padding: 20px;
@@ -1424,8 +1424,10 @@ input:checked + .choix::before {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         height: auto;
     }
+    .Tableau {
+        overflow-x: auto;
+    }
 }
-
 @media (max-width:768px) {
     .header{
         margin: 0;
