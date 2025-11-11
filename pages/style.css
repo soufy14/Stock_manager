@@ -33,10 +33,10 @@ body{
     background: var(--Background-color);
     color: var(--Text-Primary-color);
 }
+
 select{
     outline-color: rgb(28, 28, 28);
 }
-
 header{
     width: 100vw;
     padding: 20px;
@@ -253,7 +253,7 @@ section{
 }
 .ligne_2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     margin: 40px;
     gap: 50px;
 }
@@ -309,7 +309,6 @@ section{
     color: var(--Text-White-color);
     font-size: 2rem;
 }
-
 
 .ligne_3{
     display: grid;
@@ -402,9 +401,7 @@ section{
     flex-direction: column;
     gap: 23px;
 }
-.space .p{
-    background-color: #D4E4FD;
-}
+
 .grid .ligne_4_3{
     display: flex;
     justify-content: start;
@@ -610,7 +607,7 @@ section{
 }
 td{
    text-align: center;
-   padding: 20px;
+   padding: 20px 30px;
 }
 .n_3 p{
     /* color: var(--Primary-color); */
@@ -618,12 +615,16 @@ td{
     border-radius: 8px;
     padding: 5px 12px;
 }
+.cent_1{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
 .cent{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 18px;
-    text-align: start;
 }
 
 .n_4 p{
@@ -750,7 +751,6 @@ td{
     font-size: 13px;
 }
 
-
 /* -------------------------------------------Analytics & Rapports----------------------------------------------------------- */
 
 .aligne_2 #grid_1, .aligne_2 #grid_2, .aligne_2 #grid_3, .aligne_2 #grid_4{
@@ -769,7 +769,6 @@ td{
     background-color: #DDF8E4;
     display: flex;
     justify-content: center;
-    justify-content: center;
     border-radius: 8px;
     font-size: 12px;
     font-weight: 600;
@@ -780,7 +779,6 @@ td{
 #grid_3 .rouge{
     background-color: #F9E2E1;
     display: flex;
-    justify-content: center;
     justify-content: center;
     border-radius: 8px;
     font-size: 12px;
@@ -851,56 +849,46 @@ td{
 
 .class_1 #diag{
     width: 100%;
+    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
     border-bottom: solid 1px var(--Border-color);
     border-radius: 5px 5px 0 0;
 }
 .class_1 .diag_1{
     height: 25px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
+    
 }
 .class_1 .diag_2{
     height: 70px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_3{
     height: 55px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_4{
     height: 120px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_5{
     height: 100px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_6{
     height: 130px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_7{
     height: 90px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_8{
     height: 200px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_9{
     height: 160px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_10{
     height: 125px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_11{
     height: 190px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .class_1 .diag_12{
     height: 170px;
-    background: linear-gradient(180deg,rgba(96, 162, 249, 1) 26%, rgba(44, 111, 235, 1) 64%);
 }
 .Jan{
     display: flex;
@@ -1300,7 +1288,7 @@ input:checked + .choix::before {
 }
 .element_3{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: start;
     gap: 20px;
     padding-top: 30px;
@@ -1495,6 +1483,7 @@ input:checked + .choix::before {
     .ligne_1, .ligne_2, .cards, .ligne_3_1, .command,
     .para_card, .ligne_4, .ligne_5, .central{
         margin: 20px;
+        height: auto;
     }
     .grid .ligne_4_3{
         margin: 0;
@@ -1557,6 +1546,9 @@ input:checked + .choix::before {
     .ligne_2{
         grid-template-columns: 1fr;
     }
+    .logo .p{
+        font-size: 20px;
+    }
     .navigateur .admis {
         display: none;
     }
@@ -1570,17 +1562,22 @@ input:checked + .choix::before {
     }
      #cc_1{
         margin-left: 0;
-    }  
-}
-@media (max-width:375px) {
+    } 
+    .element_2{
+        flex-direction: column;
+        gap: 20px;
+    } 
     .element_3 {
         flex-direction: column;
     }
     .element_3 button {
-        width: 200px;
+        width: 100%;
     }
+}
+@media (max-width:375px) {
+    
     .mai {
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: repeat(4, 1fr);
     }
     .para_card_2 {
         padding: 0;
@@ -1595,10 +1592,10 @@ input:checked + .choix::before {
         height: auto;
     }
     .ligne_3_1 {
-        margin: 0;
-        padding: 0;
+        margin: 20px;
+        padding: 10px;
         padding-top: 20px;
-        height: 300px;
+        height: auto;
     }
     .navigateur .logo {
         font-size: 16px;
@@ -1609,6 +1606,13 @@ input:checked + .choix::before {
     .sidebar{
         background: #0000008a;
     }
+}
+#section:target{
+    animation: slideUp 0.5s ease-in-out alternate;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 /* -------------------------------------------------------------------------------voire commande----------------------------------------------------------- */
 
@@ -1641,7 +1645,7 @@ input:checked + .choix::before {
     width: 680px;
     height: 70%;
     background-color: #ffffff;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px 4px 4px 15px;
     overflow: scroll;
     margin: 40px;
     transition: 0.3s ease;
